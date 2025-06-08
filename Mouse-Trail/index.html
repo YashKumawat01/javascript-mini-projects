@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Neon Gas Cursor Trail</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: #111;
+  overflow: hidden;
+  cursor: crosshair;
+}
+
+.trail-dot {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #00f0ff;
+  box-shadow:
+    0 0 10px #00f0ff,
+    0 0 20px #00f0ff,
+    0 0 30px #00f0ff;
+  opacity: 0.8;
+  transform: translate(-50%, -50%);
+  animation: gasFade 1s ease-out forwards;
+}
+
+@keyframes gasFade {
+  to {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+    filter: blur(8px);
+  }
+}
+
+</style>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

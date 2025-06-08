@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crazy Color Bubbles</title>
+  <!-- <link rel="stylesheet" href="style.css" /> -->
+</head>
+<body>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: #2f2f2f;
+  overflow: hidden;
+  cursor: crosshair;
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  pointer-events: none;
+}
+/* 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: #2f2f2f;
+  overflow: hidden;
+  cursor: crosshair;
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  animation: pop 1s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+ */
+
+
+@keyframes pop {
+  0% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+    </style>
+  <script src="script.js"></script>
+</body>
+</html>
