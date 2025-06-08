@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Digital Clock</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #1e1e2f, #3a3a60);
+      color: white;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      font-size: 26px;
+      font-weight: 500;
+      text-align: center;
+      color: #f8f8f8;
+    }
+
+    .clock {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 25px 50px;
+      border-radius: 15px;
+      font-size: 42px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: #00ffcc;
+      box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .clock:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(0, 255, 204, 0.5);
+    }
+
+    @media (max-width: 500px) {
+      .clock {
+        font-size: 30px;
+        padding: 20px 35px;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>⏰ Digital Clock - Local Time</h1>
+  <div class="clock"></div>
+
+  <script>
+    const clock = document.querySelector('.clock');
+
+    setInterval(() => {
+      let date = new Date();
+      clock.innerHTML = date.toLocaleTimeString();
+    }, 1000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BMI Calculator</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(to right, #3a6186, #89253e);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(10px);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 28px;
+      color: #fff;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input[type="text"] {
+      padding: 10px 15px;
+      border-radius: 10px;
+      border: none;
+      font-size: 16px;
+      outline: none;
+    }
+
+    button {
+      padding: 12px;
+      background: #ffffff20;
+      border: 1px solid #ffffff40;
+      border-radius: 12px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #ffffff40;
+    }
+
+    .result {
+      margin-top: 10px;
+      padding: 10px;
+      background: #00000040;
+      border-radius: 8px;
+      font-weight: bold;
+      color: #ffeb3b;
+    }
+
+    .result-guide {
+      margin-top: 20px;
+      font-size: 14px;
+      background-color: #ffffff10;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    .result-guide p {
+      margin-bottom: 5px;
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 22px;
+      }
+
+      .container {
+        padding: 20px;
+      }
+
+      input, button {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>💪 BMI Calculator</h1>
+    <form action="#">
+      <label for="height">Height (cm)</label>
+      <input type="text" id="height" required />
+
+      <label for="weight">Weight (kg)</label>
+      <input type="text" id="weight" required />
+
+      <button>Calculate</button>
+
+      <div class="result"></div>
+
+      <div class="result-guide">
+        <p>🔵 BMI &lt; 18.5 — Underweight</p>
+        <p🟢 18.5 ≤ BMI ≤ 24.9 — Normal</p>
+        <p>🟠 25 ≤ BMI ≤ 29.9 — Overweight</p>
+        <p>🔴 BMI ≥ 30 — Obese</p>
+      </div>
+    </form>
+  </div>
+
+  <script src="script.js">  </script>
+</body>
+</html>

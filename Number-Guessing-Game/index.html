@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Number Guessing Game</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(120deg, #1a1a40, #222);
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    #wrapper {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.1);
+      width: 100%;
+      max-width: 450px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #00ffff;
+    }
+
+    p {
+      margin: 10px 0;
+      font-size: 16px;
+      color: #fbfbfb;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      border-radius: 8px;
+      background: #2e2e52;
+      color: #fff;
+    }
+
+    input[type="submit"] {
+      margin-top: 15px;
+      padding: 12px;
+      width: 100%;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background: #00ffff;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background: #00cccc;
+    }
+
+    .resultParas {
+      margin-top: 20px;
+    }
+
+    .guesses {
+      color: #fff800;
+      font-weight: bold;
+    }
+
+    .lastResult {
+      font-weight: bold;
+      color: #00ff99;
+    }
+
+    .execute h2 {
+      font-size: 20px;
+      margin-top: 15px;
+    }
+
+    .button {
+      margin-top: 20px;
+      background-color: #00ffcc;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      color: #000;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .button:hover {
+      background-color: #00e6b8;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <h1>Number Guessing Game</h1>
+    <p>Try and Guess a Random Number between 1 and 100</p>
+    <p>You have 10 attempts to guess the right Number</p>
+
+    <form action="">
+      <label for="guessField" id="guess">Guess a Number</label>
+      <input type="text" id="guessField" class="guessField" />
+      <input type="submit" value="Submit the Guess" id="sbt" class="guessSubmit" />
+    </form>
+
+    <div class="resultParas">
+      <p>Previous Guess : <span class="guesses"></span></p>
+      <p>Guesses Remaining : <span class="lastResult">10</span></p>
+      <p class="execute"></p>
+    </div>
+  </div>
+
+  <script src="script.js">  </script>
+</body>
+</html>
