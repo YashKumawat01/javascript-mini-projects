@@ -20,6 +20,15 @@ This repository contains 4 beginner to intermediate JavaScript projects demonstr
 
 ---
 
+## 🔗 Live Demo Links
+
+- [🎨 Background Color Changing](https://YashKumawat01.github.io/javascript-mini-project/Background-Color-Changing/)
+- [⚖️ BMI Calculator](https://YashKumawat01.github.io/javascript-mini-project/BMI-Calculator/)
+- [⏰ Digital Clock](https://YashKumawat01.github.io/javascript-mini-project/Digital-Clock/)
+- [🎯 Number Guessing Game](https://YashKumawat01.github.io/javascript-mini-project/Number-Guessing-Game/)
+
+---
+
 ## Folder Structure
 
 /Background-Color-Changing  
